@@ -32,10 +32,7 @@ public class CmdDeleteElement implements CommandInterface
   {
         String eintrag;
       
-        eintrag =   "Name: " + view.getTfName().getText() + "\n" +
-                    "Telefon: " + view.getTfTel().getText() + "\n"+
-                    "Handy: " + view.getTfHandy().getText() + "\n"+
-                    "Email: " + view.getTfEmail().getText() + "\n\n";
+        eintrag =  model.getEintrag();
         
         if (view.getTaOuput().getText().contains(eintrag))
                 {

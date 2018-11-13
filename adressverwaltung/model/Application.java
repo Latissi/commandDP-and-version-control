@@ -6,6 +6,7 @@
 
 package adressverwaltung.model;
 
+import adressverwaltung.view.Surface;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -21,11 +22,31 @@ import javax.swing.JTextField;
  */
 public class Application
 {
-  public Application()
+    private Surface fenster;
+  public Application(Surface fenster)
   {
-
+      this.fenster = fenster;
+  }
+  /**
+   * gets the user input for all text fields and puts it into one string
+   * @return returns the new string
+   */
+  public String getEintrag (){
+      String eintrag =  
+              "Name: " + fenster.getTfName().getText() + "\n" +
+              "Telefon: " + fenster.getTfTel().getText() + "\n"+
+              "Handy: " + fenster.getTfHandy().getText() + "\n"+
+              "Email: " + fenster.getTfEmail().getText() + "\n\n";
+      return eintrag;
   }
   
+  /**
+   * loads the (buffered)text from the specified file and returns it
+   * @param f the File from which the text is supposed to be loaded
+   * @return returns the string which was read out of the file
+   * @throws FileNotFoundException
+   * @throws IOException 
+   */
   public String loadText(File f) throws FileNotFoundException, IOException
     {
         FileInputStream fis = new FileInputStream(f);

@@ -22,7 +22,7 @@ public class Start
   {
     Surface frm = new Surface();
     frm.setVisible(true);
-    Application model = new Application();
+    Application model = new Application(frm);
     Controller controllerOpenSave = new Controller(frm, model);
     controllerOpenSave.registerEvents();
     ControllerExecute controllerExecute = new ControllerExecute(frm, model);
