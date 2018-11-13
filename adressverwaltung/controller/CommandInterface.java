@@ -7,11 +7,17 @@ package adressverwaltung.controller;
  */
 
 /**
- *
- * @author nobody
+ * Interface to declare functions for using Commands called by events
+ * @author Leonhard Römer, Fabian Heise
  */
 public interface CommandInterface
 {
+    /**
+    * Function to call a command
+    */
     public void execute();
+    /**
+    * Function to withdraw a executed command
+    */
     public void undo();  
 }
