@@ -22,21 +22,20 @@ import javax.swing.JTextField;
  */
 public class Application
 {
-    private Surface fenster;
-  public Application(Surface fenster)
+  public Application()
   {
-      this.fenster = fenster;
+    
   }
   /**
    * gets the user input for all text fields and puts it into one string
    * @return returns the new string
    */
-  public String getEintrag (){
+  public String getEintrag (String name, String Tel, String Handy, String Email){
       String eintrag =  
-              "Name: " + fenster.getTfName().getText() + "\n" +
-              "Telefon: " + fenster.getTfTel().getText() + "\n"+
-              "Handy: " + fenster.getTfHandy().getText() + "\n"+
-              "Email: " + fenster.getTfEmail().getText() + "\n\n";
+              "Name: " + name+ "\n" +
+              "Telefon: " + Tel + "\n"+
+              "Handy: " + Handy + "\n"+
+              "Email: " + Email + "\n\n";
       return eintrag;
   }
   

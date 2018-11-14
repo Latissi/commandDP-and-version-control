@@ -21,8 +21,8 @@ public class Start
   public Start()
   {
     Surface frm = new Surface();
-    frm.setVisible(true);
-    Application model = new Application(frm);
+    
+    Application model = new Application();
     Controller controllerOpenSave = new Controller(frm, model);
     controllerOpenSave.registerEvents();
     ControllerExecute controllerExecute = new ControllerExecute(frm, model);
@@ -30,7 +30,7 @@ public class Start
     controllerExecute.registerCommands();
     ControllerUndo controllerUndo = new ControllerUndo(frm, model, controllerExecute.getInvoker());
     controllerUndo.registerEvents();
-    
+    frm.setVisible(true);  
   }
 
   /**

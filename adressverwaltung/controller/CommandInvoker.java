@@ -39,7 +39,7 @@ public class CommandInvoker
   public CommandInvoker()
   {
     commands = new HashMap<>();
-    undoStack=new Stack();
+    undoStack = new Stack<>();
   }
   /**
   * function to add an event and the related command to the HashMap
@@ -66,5 +66,13 @@ public class CommandInvoker
   public void undoCommand()
   {
     undoStack.pop().undo();
+  }
+  /**
+   * function to publish private Stack undoStack
+   * @return the undoStack
+   */
+  public Stack<CommandInterface> getUndoStack()
+  {
+    return undoStack;
   }
 }

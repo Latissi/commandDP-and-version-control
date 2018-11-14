@@ -59,7 +59,10 @@ public class ControllerUndo implements ActionListener {
         
         if ((src == view.getMiUndo()))
                 {
+                  if (!invoker.getUndoStack().empty())
+                  {
                     invoker.undoCommand();
+                  }
                 }
     } 
 }

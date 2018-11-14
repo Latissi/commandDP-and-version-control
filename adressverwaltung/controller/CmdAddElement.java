@@ -32,7 +32,8 @@ public class CmdAddElement implements CommandInterface
   { 
     String eintrag;
     
-    eintrag = model.getEintrag();
+    eintrag = model.getEintrag(view.getTfName().getText(), view.getTfTel().getText()
+    , view.getTfHandy().getText(), view.getTfEmail().getText());
     addedElements.push(eintrag);
     view.getTaOuput().setText(view.getTaOuput().getText()+eintrag);
   }
